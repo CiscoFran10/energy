@@ -1,0 +1,41 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+	--foreground: #333333;
+	--background: #f7f8fa;
+}
+
+body {
+	color: var(--foreground-rgb);
+	background: var(--background);
+}
+
+.material-symbols-rounded {
+	font-variation-settings: "FILL" 1, "wght" 400, "GRAD" 0, "opsz" 48;
+}
+
+@layer components {
+	.btn {
+		@apply px-4 py-2 bg-transparent text-green-300 border border-green-200 focus:bg-green-300 rounded-md focus:text-green-50 font-semibold text-sm transition duration-300 hover:bg-gray-200/40 hover:text-green-300/60;
+	}
+
+	.btn.active {
+		@apply bg-green-300 text-green-50;
+	}
+
+	.menu-item {
+		@apply text-gray-200 hover:text-green-300 transition-all duration-300 flex gap-2 items-center text-sm;
+	}
+
+	.content-wrapper {
+		@apply bg-white py-7 px-8 rounded-xl shadow-lg shadow-slate-200 w-full;
+	}
+}
+
+@layer utilities {
+	.icon-fill {
+		font-variation-settings: "FILL" 1, "wght" 400, "GRAD" 0, "opsz" 48;
+	}
+}
